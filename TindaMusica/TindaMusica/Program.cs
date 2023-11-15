@@ -1,3 +1,5 @@
+using menuslide;
+using TindaMusica.Venta;
 namespace TindaMusica
 {
     internal static class Program

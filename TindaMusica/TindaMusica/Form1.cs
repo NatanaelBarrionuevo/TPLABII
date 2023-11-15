@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using TindaMusica.Venta;
 
 namespace menuslide
 {
@@ -29,14 +30,14 @@ namespace menuslide
         {
             if (sidebarexp)
             {
-                
+
 
                 //maneja la velocidad de animacion
                 sidebar.Width -= 50;
 
 
                 //si esta expandido, que se minimize 
-                if (sidebar.Width==sidebar.MinimumSize.Width)
+                if (sidebar.Width == sidebar.MinimumSize.Width)
                 {
                     sidebarexp = false;
                     sidebartimer.Stop();
@@ -46,7 +47,7 @@ namespace menuslide
             {       //maneja la velocidad de animacion
                 sidebar.Width += 50;
                 //si esta minimizado que se expanda
-                if (sidebar.Width==sidebar.MaximumSize.Width)
+                if (sidebar.Width == sidebar.MaximumSize.Width)
                 {
                     sidebarexp = true;
                     sidebartimer.Stop();
@@ -55,7 +56,7 @@ namespace menuslide
         }
         #region menubtn
 
-        
+
         private void button5_Click(object sender, EventArgs e)
         {
             sidebartimer.Start();
@@ -87,10 +88,10 @@ namespace menuslide
 
         private void button3_Click_1(object sender, EventArgs e)
         {
-            this.WindowState=FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
         }
         #endregion
-        
+
         private void OpenChildForm(Form childForm)
         {
             //open only form
@@ -112,6 +113,25 @@ namespace menuslide
         private void btninformacion_Click(object sender, EventArgs e)
         {
             OpenChildForm(new informacion());
+        }
+
+        private void pnlhijos_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btncompra_Click(object sender, EventArgs e)
+        {
+            IniciarCompra();
+        }
+
+        private void IniciarCompra()
+        {
+            frmVenta form = new frmVenta();
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            this.Controls.Add(form);
+            form.Show();
         }
     }
 }

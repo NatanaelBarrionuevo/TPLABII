@@ -1,0 +1,12 @@
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.csproj.AssemblyReference.cache
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.GeneratedMSBuildEditorConfig.editorconfig
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.AssemblyInfoInputs.cache
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.AssemblyInfo.cs
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.csproj.CoreCompileInputs.cache
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\bin\Debug\net6.0\TiendaMusicaBack.deps.json
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\bin\Debug\net6.0\TiendaMusicaBack.dll
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\bin\Debug\net6.0\TiendaMusicaBack.pdb
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.dll
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\refint\TiendaMusicaBack.dll
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\TiendaMusicaBack.pdb
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TiendaMusicaBack\obj\Debug\net6.0\ref\TiendaMusicaBack.dll

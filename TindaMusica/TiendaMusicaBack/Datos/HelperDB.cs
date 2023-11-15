@@ -3,14 +3,14 @@ using System.Data.SqlClient;
 
 namespace PresupuestosBack.Datos
 {
-    class HelperDB
+    public class HelperDB
     {
         private static HelperDB instancia;
         private SqlConnection cnn;
 
         private HelperDB()
         {
-            cnn = new SqlConnection("");
+            cnn = new SqlConnection("Data Source = localhost; Initial Catalog = TIENDA_MUSICA_V13; User ID = sa; Password = test");
         }
 
         public static HelperDB ObtenerInstancia()

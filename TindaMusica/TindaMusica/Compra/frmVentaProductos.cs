@@ -17,7 +17,7 @@ using TiendaMusicaBack.Enitidades;
 
 namespace TindaMusica.Venta
 {
-    
+
     public partial class frmVentaProductos : Form
     {
         List<DetaleFactura> detalleFactura;
@@ -49,7 +49,7 @@ namespace TindaMusica.Venta
             Producto prod = productoDao.ConsultarProducto(Convert.ToInt32(codigo));
 
             CargarDetalle(prod);
-             ActualizarDgv();
+            ActualizarDgv();
 
 
             //List<Parametro> parametros = new List<Parametro>();
@@ -58,12 +58,12 @@ namespace TindaMusica.Venta
 
             //DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL(sp, parametros);
 
-            
+
             //List<Producto> lista = new List<Producto>();
             //foreach (DataRow row in tabla.Rows)
             //{
 
-                
+
             //        dataGridView1.Rows.Add(new object[] {
 
             //        Convert.ToInt32(row["ID_PRODUCTO"]),
@@ -72,10 +72,10 @@ namespace TindaMusica.Venta
             //        row["TIPO"].ToString()
             //        });
             //}
-                
 
-                
-         }
+
+
+        }
 
         private void ActualizarDgv()
         {
@@ -86,35 +86,50 @@ namespace TindaMusica.Venta
 
                     det.Product.Id,
                     det.Product.Nombre,
-                    det.Product.Precio,
-                    det.Product.Tipo_prod.Tipo
+                    det.Precio,
+                    det.Product.Tipo_prod.Tipo,
+                    det.Cantidad
                     });
 
             }
 
         }
 
-        private void ActualizarDetalle()
-        {
-            throw new NotImplementedException();
-        }
+
 
         private void CargarDetalle(Producto prod)
         {
+            bool existe = false;
             foreach (DetaleFactura det in detalleFactura)
             {
                 if (prod.Id == det.Product.Id)
                 {
                     det.Cantidad++;
+                    existe = true;
                 }
             }
-            
+
+            if (!existe)
+            {
+                detalleFactura.Add(new DetaleFactura()
+                {
+                    Product = prod,
+                    Cantidad = 1,
+                    Precio = prod.Precio
+                });
+            }
+
         }
 
         private void frmVentaProductos_Load(object sender, EventArgs e)
         {
 
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
-    }
+}
 

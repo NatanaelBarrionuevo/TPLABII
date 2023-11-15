@@ -40,7 +40,7 @@ namespace TindaMusica.Venta
 
             //this.Controls.Add(formServ);
             formServ.Show();
-            
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -74,5 +74,5 @@ namespace TindaMusica.Venta
             formProd.Show();
         }
     }
-    
+
 }

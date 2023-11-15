@@ -10,7 +10,7 @@ namespace TiendaMusicaBack.Enitidades
     {
 		private int id;
 		private string nombre;
-		private TipoProductos tipo_prod;
+		private TipoCaracteristica tipo_prod;
 		private Marca marca;
 		private Proveedor proveedor;
 		private Pais pais;
@@ -52,7 +52,7 @@ namespace TiendaMusicaBack.Enitidades
 		}
 
 
-		public TipoProductos Tipo_prod
+		public TipoCaracteristica Tipo_prod
 		{
 			get { return tipo_prod; }
 			set { tipo_prod = value; }

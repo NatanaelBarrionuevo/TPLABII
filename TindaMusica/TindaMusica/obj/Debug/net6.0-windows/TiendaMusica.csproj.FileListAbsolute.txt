@@ -28,3 +28,4 @@ E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\Tinda
 E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TindaMusica\bin\Debug\net6.0-windows\TiendaMusicaBack.dll
 E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TindaMusica\bin\Debug\net6.0-windows\TiendaMusicaBack.pdb
 E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TindaMusica\obj\Debug\net6.0-windows\TiendaMusica.csproj.CopyComplete
+E:\Lucas\TUP\Tecnicatura en Prog - 2023\Laboratorio II\TPLABII\TindaMusica\TindaMusica\obj\Debug\net6.0-windows\menuslide.informacion.resources

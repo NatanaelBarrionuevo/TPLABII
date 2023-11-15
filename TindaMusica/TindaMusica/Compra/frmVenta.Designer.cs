@@ -28,62 +28,64 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSiguiente = new System.Windows.Forms.Button();
-            this.btnCancelar = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.SuspendLayout();
+            btnSiguiente = new Button();
+            btnCancelar = new Button();
+            label1 = new Label();
+            SuspendLayout();
             // 
             // btnSiguiente
             // 
-            this.btnSiguiente.Location = new System.Drawing.Point(600, 548);
-            this.btnSiguiente.Name = "btnSiguiente";
-            this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
-            this.btnSiguiente.TabIndex = 0;
-            this.btnSiguiente.Text = "Siguiente";
-            this.btnSiguiente.UseVisualStyleBackColor = true;
-            this.btnSiguiente.Click += new System.EventHandler(this.button1_Click);
+            btnSiguiente.Location = new Point(586, 617);
+            btnSiguiente.Margin = new Padding(3, 4, 3, 4);
+            btnSiguiente.Name = "btnSiguiente";
+            btnSiguiente.Size = new Size(75, 29);
+            btnSiguiente.TabIndex = 0;
+            btnSiguiente.Text = "Siguiente";
+            btnSiguiente.UseVisualStyleBackColor = true;
+            btnSiguiente.Click += button1_Click;
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(323, 548);
-            this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelar.TabIndex = 1;
-            this.btnCancelar.Text = "Cancelar";
-            this.btnCancelar.UseVisualStyleBackColor = true;
-            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            btnCancelar.Location = new Point(309, 617);
+            btnCancelar.Margin = new Padding(3, 4, 3, 4);
+            btnCancelar.Name = "btnCancelar";
+            btnCancelar.Size = new Size(75, 29);
+            btnCancelar.TabIndex = 1;
+            btnCancelar.Text = "Cancelar";
+            btnCancelar.UseVisualStyleBackColor = true;
+            btnCancelar.Click += btnCancelar_Click;
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(52, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 36);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Venta";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            label1.AutoSize = true;
+            label1.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(52, 25);
+            label1.Name = "label1";
+            label1.Size = new Size(93, 36);
+            label1.TabIndex = 2;
+            label1.Text = "Venta";
+            label1.Click += label1_Click;
             // 
             // frmVenta
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(967, 643);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.btnCancelar);
-            this.Controls.Add(this.btnSiguiente);
-            this.Name = "frmVenta";
-            this.Text = "Venta";
-            this.Load += new System.EventHandler(this.frmVenta_Load);
-            this.ResumeLayout(false);
-            this.PerformLayout();
-
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(967, 804);
+            Controls.Add(label1);
+            Controls.Add(btnCancelar);
+            Controls.Add(btnSiguiente);
+            Margin = new Padding(3, 4, 3, 4);
+            Name = "frmVenta";
+            Text = "Venta";
+            Load += frmVenta_Load;
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnSiguiente;
-        private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.Label label1;
+        private Button btnSiguiente;
+        private Button btnCancelar;
+        private Label label1;
     }
 }

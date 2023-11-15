@@ -127,11 +127,12 @@ namespace menuslide
 
         private void IniciarCompra()
         {
-            frmVenta form = new frmVenta();
-            form.TopLevel = false;
-            form.FormBorderStyle = FormBorderStyle.None;
-            this.Controls.Add(form);
-            form.Show();
+            OpenChildForm(new frmVenta());
+            //frmVenta form = new frmVenta();
+            //form.TopLevel = false;
+            //form.FormBorderStyle = FormBorderStyle.None;
+            //this.Controls.Add(form);
+            //form.Show();
         }
     }
 }

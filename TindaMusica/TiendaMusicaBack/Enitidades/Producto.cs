@@ -10,6 +10,7 @@ namespace TiendaMusicaBack.Enitidades
     {
 		private int id;
 		private string nombre;
+		private string descripcion;
 		private TipoCaracteristica tipo_prod;
 		private Marca marca;
 		private Proveedor proveedor;
@@ -17,7 +18,12 @@ namespace TiendaMusicaBack.Enitidades
 		private int stock;
 		private double precio;
 
-		public double Precio
+        public string Descripcion
+        {
+            get { return descripcion; }
+            set { descripcion = value; }
+        }
+        public double Precio
 		{
 			get { return precio; }
 			set { precio = value; }

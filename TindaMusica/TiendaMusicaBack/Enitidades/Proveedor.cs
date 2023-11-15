@@ -62,6 +62,10 @@ namespace TiendaMusicaBack.Enitidades
             Nombre = nombre;
             Barrio = barrio;
         }
+        public Proveedor()
+        {
+            
+        }
 
     }
 }

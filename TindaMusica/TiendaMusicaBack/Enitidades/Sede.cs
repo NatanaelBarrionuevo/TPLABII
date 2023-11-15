@@ -62,5 +62,9 @@ namespace TiendaMusicaBack.Enitidades
 			Barrio = barrio;
 			Calle = calle;
         }
+        public Sede()
+        {
+            
+        }
     }
 }

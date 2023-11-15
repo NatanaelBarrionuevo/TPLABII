@@ -43,7 +43,7 @@ namespace TiendaMusicaBack.Enitidades
         }
 
 
-        public Puesto MyProperty
+        public Puesto Puesto
         {
             get { return puesto; }
             set { puesto = value; }

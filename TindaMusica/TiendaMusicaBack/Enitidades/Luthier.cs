@@ -19,6 +19,7 @@ namespace TiendaMusicaBack.Enitidades
         public Luthier(string apellido, string nombre, int id) : base(apellido, nombre)
         {
             Id = id;
+            
         }
     }
 }

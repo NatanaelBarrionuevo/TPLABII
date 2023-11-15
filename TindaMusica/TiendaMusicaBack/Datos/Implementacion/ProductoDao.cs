@@ -24,18 +24,25 @@ namespace TiendaMusicaBack.Datos.Implementacion
 
 
             //List<Producto> lista = new List<Producto>();
-            foreach (DataRow row in tabla.Rows)
+            if(tabla.Rows.Count > 0 )
             {
-                producto = new Producto() {
-                    Id = Convert.ToInt32(row["ID_PRODUCTO"]),
-                    Nombre = row["NOMBRE"].ToString(),
-                    Precio = (float)Convert.ToDecimal(row["Precio"].ToString()),
-                    Tipo_prod = new TipoCaracteristica() { Id = Convert.ToInt32(row["ID_T_PRODUCTO"]), Tipo = row["TIPO"].ToString() }
+                foreach (DataRow row in tabla.Rows)
+                {
+                    producto = new Producto()
+                    {
+                        Id = Convert.ToInt32(row["ID_PRODUCTO"]),
+                        Nombre = row["NOMBRE"].ToString(),
+                        Precio = (float)Convert.ToDecimal(row["Precio"].ToString()),
+                        Tipo_prod = new TipoCaracteristica() { Id = Convert.ToInt32(row["ID_T_PRODUCTO"]), Tipo = row["TIPO"].ToString() }
                     };
 
+                }
+
+                return producto;
             }
 
-            return producto;
+            return null;
+            
         }
     }
 }

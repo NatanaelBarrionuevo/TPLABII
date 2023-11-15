@@ -38,8 +38,11 @@ namespace TindaMusica.Venta
         {
             if (e.KeyData == Keys.Enter)
             {
-                AgregarProducto(txtCodigo.Text);
-                txtCodigo.Text = String.Empty;
+                if (txtCodigo.Text != String.Empty)
+                {
+                    AgregarProducto(txtCodigo.Text);
+                    txtCodigo.Text = String.Empty;
+                }
                 //MessageBox.Show("Pressed enter.");
             }
         }
@@ -48,30 +51,13 @@ namespace TindaMusica.Venta
         {
             Producto prod = productoDao.ConsultarProducto(Convert.ToInt32(codigo));
 
-            CargarDetalle(prod);
-            ActualizarDgv();
-
-
-            //List<Parametro> parametros = new List<Parametro>();
-            //string sp = "SP_CONSULTAR_PRODUCTO";
-            //parametros.Add(new Parametro("@id", codigo));
-
-            //DataTable tabla = HelperDB.ObtenerInstancia().ConsultaSQL(sp, parametros);
-
-
-            //List<Producto> lista = new List<Producto>();
-            //foreach (DataRow row in tabla.Rows)
-            //{
-
-
-            //        dataGridView1.Rows.Add(new object[] {
-
-            //        Convert.ToInt32(row["ID_PRODUCTO"]),
-            //        row["NOMBRE"].ToString(),
-            //        (float)Convert.ToDecimal(row["Precio"].ToString()),
-            //        row["TIPO"].ToString()
-            //        });
-            //}
+            if (prod != null)
+            {
+                CargarDetalle(prod);
+                ActualizarDgv();
+            }
+            
+         
 
 
 
@@ -100,24 +86,27 @@ namespace TindaMusica.Venta
         private void CargarDetalle(Producto prod)
         {
             bool existe = false;
-            foreach (DetaleFactura det in detalleFactura)
-            {
-                if (prod.Id == det.Product.Id)
+            if (prod !=null) {
+                foreach (DetaleFactura det in detalleFactura)
                 {
-                    det.Cantidad++;
-                    existe = true;
+                    if (prod.Id == det.Product.Id)
+                    {
+                        det.Cantidad++;
+                        existe = true;
+                    }
+                }
+
+                if (!existe)
+                {
+                    detalleFactura.Add(new DetaleFactura()
+                    {
+                        Product = prod,
+                        Cantidad = 1,
+                        Precio = prod.Precio
+                    });
                 }
             }
-
-            if (!existe)
-            {
-                detalleFactura.Add(new DetaleFactura()
-                {
-                    Product = prod,
-                    Cantidad = 1,
-                    Precio = prod.Precio
-                });
-            }
+            
 
         }
 
@@ -130,6 +119,8 @@ namespace TindaMusica.Venta
         {
 
         }
+
+        public List<DetaleFactura> GetDetaleFacturaList() { return detalleFactura; }
     }
 }
 
